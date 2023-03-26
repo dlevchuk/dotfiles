@@ -1,0 +1,61 @@
+#install from cmd with admins rights:
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+
+[work]
+ choco install slack -y
+ choco install openvpn -y
+ choco install firefox -y
+ choco install putty.install -y
+ choco install teamviewer -y
+ choco install microsoft-teams -y
+ choco install winscp -y
+ choco install zoom -y
+ choco install mysql.workbench -y
+
+[personal]
+ choco install sublimetext4 -y
+ choco install microsoft-windows-terminal -y
+ choco install 7zip.install -y
+ choco install choco-upgrade-all-at-startup -y
+ choco install monosnap -y
+ choco install googlechrome
+ choco install vlc
+ choco install ccleaner
+ choco install libreoffice-fresh
+ choco install thunderbird
+ choco install keepassxc -y
+ choco install dropbox
+ choco install totalcommander
+ choco install quicklook 			#just highlight a file in Explorer 
+ choco install windows-tweaker
+ choco install ditto -y                 #windows clipboard
+ choco install eartrumpet -y			#custom windows volume bar
+ choco install icloud
+ choco install qbittorrent -y
+ choco install duplicati -y
+ choco install synctrayzor -y
+ choco install tailscale -y
+ choco install grammarly -y
+ choco install autohotkey -y
+
+[hardware]
+ choco install samsung-magician -y
+
+[devs]
+ choco install git.install
+ choco install vscode -y
+ choco install openssh
+ choco install awscli
+ choco install docker-desktop -y
+
+[messangers]
+ choco install telegram.install -y
+ choco install discord.install -y
+ choco install viber -y
+
+[games]
+ choco install epicgameslauncher -y
+ choco install steam-client -y
+ choco install ubisoft-connect -y
+ choco install goggalaxy -y
+ choco install hearthstone-deck-tracker
