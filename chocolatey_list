@@ -13,49 +13,59 @@
  choco install mysql.workbench -y
 
 [personal]
+ #choco install libreoffice-fresh
+ #choco install quicklook -y         	         #just highlight a file in Explorer 
+ #choco install grammarly -y                     #Deprecated
+ #choco install partition-assistant-standard -y  #Deprecated
+ #choco install whatpulse -y
+
  choco install sublimetext4 -y
- choco install microsoft-windows-terminal -y
  choco install 7zip.install -y
  choco install choco-upgrade-all-at-startup -y
  choco install monosnap -y
- choco install googlechrome
- choco install vlc
- choco install ccleaner
- choco install libreoffice-fresh
- choco install thunderbird
+ choco install googlechrome -y
+ choco install vlc -y
+ choco install ccleaner -y
+ choco install thunderbird -y
  choco install keepassxc -y
- choco install dropbox
- choco install totalcommander
- choco install quicklook 			#just highlight a file in Explorer 
- choco install windows-tweaker
+ choco install dropbox -y
+ choco install totalcommander -y
+ choco install windows-tweaker -y
  choco install ditto -y                 #windows clipboard
  choco install eartrumpet -y			#custom windows volume bar
- choco install icloud
+ choco install icloud -y
  choco install qbittorrent -y
  choco install duplicati -y
  choco install synctrayzor -y
  choco install tailscale -y
- choco install grammarly -y
  choco install autohotkey -y
+ choco install plexmediaserver -y
+ choco install googledrive -y
+ choco install javaruntime -y
+ choco install webex-meetings -y
+ choco install gotomeeting -y
 
 [hardware]
  choco install samsung-magician -y
 
 [devs]
- choco install git.install
+ choco install git.install -y
  choco install vscode -y
- choco install openssh
- choco install awscli
+ choco install openssh -y
+ choco install awscli -y
  choco install docker-desktop -y
+ choco install microsoft-windows-terminal -y
+ choco install github-desktop -y
 
 [messangers]
  choco install telegram.install -y
  choco install discord.install -y
- choco install viber -y
+ #choco install viber -y
 
 [games]
  choco install epicgameslauncher -y
  choco install steam-client -y
  choco install ubisoft-connect -y
  choco install goggalaxy -y
- choco install hearthstone-deck-tracker
+ choco install hearthstone-deck-tracker -y
+ choco install twitch -y
