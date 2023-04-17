@@ -18,7 +18,8 @@
  #choco install grammarly -y                     #Deprecated
  #choco install partition-assistant-standard -y  #Deprecated
  #choco install whatpulse -y
-
+ #choco install totalcommander -y
+ 
  choco install sublimetext4 -y
  choco install 7zip.install -y
  choco install choco-upgrade-all-at-startup -y
@@ -29,7 +30,7 @@
  choco install thunderbird -y
  choco install keepassxc -y
  choco install dropbox -y
- choco install totalcommander -y
+ choco install mucommander -y
  choco install windows-tweaker -y
  choco install ditto -y                 #windows clipboard
  choco install eartrumpet -y			#custom windows volume bar
