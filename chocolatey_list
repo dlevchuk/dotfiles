@@ -19,11 +19,12 @@
  #choco install partition-assistant-standard -y  #Deprecated
  #choco install whatpulse -y
  #choco install totalcommander -y
+ #choco install monosnap -y                      #too highweight
  
  choco install sublimetext4 -y
  choco install 7zip.install -y
  choco install choco-upgrade-all-at-startup -y
- choco install monosnap -y
+ choco install greenshot -y                      #screenshot tool
  choco install googlechrome -y
  choco install vlc -y
  choco install ccleaner -y
