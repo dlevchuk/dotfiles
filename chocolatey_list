@@ -10,7 +10,7 @@
  choco install microsoft-teams -y
  choco install winscp -y
  choco install zoom -y
- choco install mysql.workbench -y
+ choco install dbeaver -y
 
 [personal]
  #choco install libreoffice-fresh
