@@ -20,7 +20,11 @@
  #choco install whatpulse -y
  #choco install totalcommander -y
  #choco install monosnap -y                      #too highweight
- 
+ #choco install plexmediaserver -y
+ #choco install thunderbird -y                   #migrate to docker on raspberry
+ #choco install ditto -y                 #windows clipboard
+
+
  choco install sublimetext4 -y
  choco install 7zip.install -y
  choco install choco-upgrade-all-at-startup -y
@@ -28,12 +32,10 @@
  choco install googlechrome -y
  choco install vlc -y
  choco install ccleaner -y
- choco install thunderbird -y
  choco install keepassxc -y
  choco install dropbox -y
  choco install mucommander -y
  choco install windows-tweaker -y
- choco install ditto -y                 #windows clipboard
  choco install eartrumpet -y			#custom windows volume bar
  choco install icloud -y
  choco install qbittorrent -y
@@ -41,7 +43,6 @@
  choco install synctrayzor -y
  choco install tailscale -y
  choco install autohotkey -y
- choco install plexmediaserver -y
  choco install googledrive -y
  choco install javaruntime -y
  choco install webex-meetings -y
@@ -70,4 +71,4 @@
  choco install ubisoft-connect -y
  choco install goggalaxy -y
  choco install hearthstone-deck-tracker -y
- choco install twitch -y
+#choco install twitch -y
