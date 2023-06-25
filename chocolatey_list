@@ -11,6 +11,7 @@
  choco install winscp -y
  choco install zoom -y
  choco install dbeaver -y
+ choco install 1password -y
 
 [personal]
  #choco install libreoffice-fresh
