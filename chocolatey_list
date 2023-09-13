@@ -53,6 +53,7 @@ choco install javaruntime -y
 
 [hardware]
 choco install samsung-magician -y
+choco install logioptionsplus -y
 
 [devs]
 choco install git.install -y
