@@ -54,6 +54,8 @@ choco install javaruntime -y
 [hardware]
 choco install samsung-magician -y
 choco install logioptionsplus -y
+choco install rufus -y
+choco install unetbootin -y
 
 [devs]
 choco install git.install -y
