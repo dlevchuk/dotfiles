@@ -49,7 +49,8 @@ choco install tailscale -y
 choco install autohotkey -y
 choco install googledrive -y
 choco install javaruntime -y
-
+choco install portx -y              #ssh manager
+choco install powertoys -y
 
 [hardware]
 choco install samsung-magician -y
