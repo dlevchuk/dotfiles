@@ -28,6 +28,7 @@ choco install 1password -y
 #choco install gotomeeting -y
 #choco install mucommander -y                   #too highweight app 
 #choco install totalcommander -y
+#choco install eartrumpet -y		                #custom windows volume bar
 
 choco install doublecmd -y
 choco install sublimetext4 -y
@@ -40,7 +41,6 @@ choco install ccleaner -y
 choco install keepassxc -y
 choco install dropbox -y
 choco install windows-tweaker -y
-choco install eartrumpet -y			#custom windows volume bar
 choco install icloud -y
 choco install qbittorrent -y
 choco install duplicati -y
