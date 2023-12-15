@@ -4,12 +4,12 @@
 [work]
 choco install slack -y
 choco install firefox -y
-choco install putty.install -y
 choco install winscp -y
 choco install zoom -y
 choco install dbeaver -y
 choco install 1password -y
 
+#choco install putty.install -y
 #choco install teamviewer -y
 #choco install microsoft-teams -y
 #choco install openvpn -y
