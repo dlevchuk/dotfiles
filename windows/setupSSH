@@ -1,0 +1,26 @@
+# Get information about OpenSSH capabilities
+$sshCapability = Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
+
+# Install OpenSSH if not already installed
+if ($sshCapability -eq $null) {
+    Write-Output "OpenSSH is not installed. Installing..."
+    Add-WindowsCapability -Online -Name OpenSSH.Server
+} else {
+    Write-Output "OpenSSH is already installed."
+}
+
+# Start the sshd service
+Start-Service sshd
+
+# Set the sshd service to start automatically
+Set-Service -Name sshd -StartupType 'Automatic'
+
+# Confirm the Firewall rule is configured. It should be created automatically by setup. Run the following to verify
+$firewallRule = Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue
+
+if ($firewallRule -eq $null) {
+    Write-Output "Firewall Rule 'OpenSSH-Server-In-TCP' does not exist, creating it..."
+    New-NetFirewallRule -Name 'OpenSSH-Server-In-TCP' -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
+} else {
+    Write-Output "Firewall rule 'OpenSSH-Server-In-TCP' has been created and exists."
+}
