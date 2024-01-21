@@ -29,12 +29,13 @@ choco install 1password -y
 #choco install mucommander -y                   #too highweight app 
 #choco install totalcommander -y
 #choco install eartrumpet -y		                #custom windows volume bar
+#choco install portx -y                         #ssh manager, no backup session backup strategy
+#choco install greenshot -y                     #screenshot tool
 
 choco install doublecmd -y
 choco install sublimetext4 -y
 choco install 7zip.install -y
 choco install choco-upgrade-all-at-startup -y
-choco install greenshot -y                      #screenshot tool
 choco install googlechrome -y
 choco install vlc -y
 choco install ccleaner -y
@@ -49,7 +50,7 @@ choco install tailscale -y
 choco install autohotkey -y
 choco install googledrive -y
 choco install javaruntime -y
-choco install portx -y              #ssh manager
+choco install windterm.portable -y               #ssh manager
 choco install powertoys -y
 
 [hardware]
