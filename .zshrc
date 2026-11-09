@@ -167,3 +167,4 @@ export PATH="/Users/last/.antigravity/antigravity/bin:$PATH"
 export PATH="/Users/last/.antigravity-ide/antigravity-ide/bin:$PATH"
 
 export STM32_PRG_PATH=/Applications/STMicroelectronics/STM32Cube/STM32CubeProgrammer/STM32CubeProgrammer.app/Contents/Resources/binalias dot='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias dot='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
