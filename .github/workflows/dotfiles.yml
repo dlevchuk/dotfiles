@@ -1,0 +1,11 @@
+name: Check dotfiles
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  syntax:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash .local/bin/dot-check "$GITHUB_WORKSPACE"
+      - run: git diff --check

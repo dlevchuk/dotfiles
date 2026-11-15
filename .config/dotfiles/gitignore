@@ -1,0 +1,25 @@
+# Applied only to the dotfiles repository via core.excludesFile.
+/.dotfiles/
+/.local/state/
+/.ssh/
+/.gnupg/
+/.zshrc.local
+/.bashrc.local
+/.zsh_history
+/.bash_history
+/.zsh_sessions/
+/.cache/
+/.codex/
+/.claude/
+/.gemini/
+/.npm/
+/.config/github-copilot/
+/.config/atuin/key
+/.config/atuin/session
+/.clasprc.json
+/.claude.json*
+.DS_Store
+.env
+.env.*
+*.pem
+*.key

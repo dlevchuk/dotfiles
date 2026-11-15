@@ -1,0 +1,170 @@
+tap "darrylmorley/whatcable", trusted: true
+tap "domt4/autoupdate", trusted: true
+tap "fenio/tap"
+tap "homeport/tap", trusted: true
+tap "nohajc/anylinuxfs", trusted: { formulae: ["anylinuxfs"] }
+tap "theboredteam/boring-notch", "https://github.com/TheBoredTeam/homebrew-boring-notch", trusted: true
+tap "umputun/apps"
+# Improved shell history for zsh, bash, fish and nushell
+brew "atuin", restart_service: :changed
+# Official Amazon AWS command-line interface
+brew "awscli"
+# Programmable completion for Bash 3.2
+brew "bash-completion"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Create and run Linux containers using lightweight virtual machines
+brew "container"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
+# Isolated development environments using Docker
+brew "docker-compose"
+# Disk Usage/Free Utility - a better 'df' alternative
+brew "duf"
+# Modern, maintained replacement for ls
+brew "eza"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
+# Lightweight scripting language for querying databases
+brew "flux"
+# GitHub command-line tool
+brew "gh"
+# Distributed revision control system
+brew "git"
+# GNU Privacy Guard (OpenPGP)
+brew "gnupg"
+# Ping, but with a graph
+brew "gping"
+# Kubernetes package manager
+brew "helm"
+# Improved top (interactive process viewer)
+brew "htop"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
+# Curses-based tool for viewing and analyzing log files
+brew "lnav"
+# Terminal-based visual file manager
+brew "midnight-commander"
+# Deep clean and optimize your Mac
+brew "mole"
+# 'traceroute' and 'ping' in a single tool
+brew "mtr"
+# Port scanning utility for large networks
+brew "nmap"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# Pinentry for GPG on Mac
+brew "pinentry-mac"
+# Theme for zsh
+brew "powerlevel10k"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Tail multiple Kubernetes pods & their containers
+brew "stern"
+# Easiest, most secure way to use WireGuard and 2FA
+brew "tailscale"
+# Log file highlighter
+brew "tailspin"
+# User interface to the TELNET protocol
+brew "telnet"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Internet file retriever
+brew "wget"
+# Tool for managing your YubiKey configuration
+brew "ykman"
+# UNIX shell (command interpreter)
+brew "zsh"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
+# δyƒƒ /ˈdʏf/ - A diff tool for YAML files, and sometimes JSON
+brew "homeport/tap/dyff"
+# Terminal on libghostty with a workspace/session sidebar
+cask "umputun/apps/agterm", trusted: true
+# Agent orchestration platform
+cask "antigravity"
+# AI Coding Agent IDE
+cask "antigravity-ide"
+# GUI for mounting Linux filesystems
+cask "fenio/tap/anylinuxfs-gui", trusted: true
+# Application uninstaller
+cask "appcleaner"
+# Tool to flash OS images to SD cards & USB drives
+cask "balenaetcher"
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
+# Anthropic's official Claude AI desktop app
+cask "claude"
+# Tool to show live information about the batteries in various devices
+cask "coconutbattery"
+# Two-panel file manager
+cask "commander-one"
+# Tool to run Windows software
+cask "crossover"
+# Universal database tool and SQL client
+cask "dbeaver-community"
+# Voice and text chat software
+cask "discord"
+# Client for the Dropbox cloud storage service
+cask "dropbox"
+# Web browser
+cask "firefox"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# Desktop client for GitHub repositories
+cask "github"
+# Game client
+cask "gog-galaxy"
+# Web browser
+cask "google-chrome"
+# Homebrew's official GUI
+cask "homebrew-app"
+# Keyboard customiser
+cask "karabiner-elements"
+# Password manager app
+cask "keepassxc"
+# Kubernetes IDE
+cask "lens"
+# Trims video and audio files losslessly
+cask "losslesscut"
+# Open-source firewall to block unknown outgoing connections
+cask "lulu"
+# Open-source software for live streaming and screen recording
+cask "obs"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# Screenshot measurement and annotation tool
+cask "shottr"
+# Instant messaging application focusing on security
+cask "signal"
+# Displays all open files and sockets in use by all running processes
+cask "sloth"
+# Video game digital distribution service
+cask "steam"
+# Real time file synchronisation software
+cask "syncthing-app"
+# Messaging app with a focus on speed and security
+cask "telegram"
+# Menu bar manager
+cask "thaw"
+# Virtual machines UI using QEMU
+cask "utm"
+# Multimedia player
+cask "vlc"
+# Menu bar toolkit with keep-awake, system monitor and volume mixer
+cask "vorssaint"
+# Menu bar app for USB-C cable diagnostics
+cask "darrylmorley/whatcable/whatcable"
+# Native desktop client for WhatsApp
+cask "whatsapp"
+# Administration tool for MikroTik RouterOS
+cask "winbox"
+# Multiplayer code editor
+cask "zed"
+npm "@google/clasp"

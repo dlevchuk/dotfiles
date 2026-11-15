@@ -1,0 +1,13 @@
+#!/bin/bash
+set -euo pipefail
+root="${1:-$HOME}"
+for file in .zshrc .p10k.zsh; do
+  [[ ! -f "$root/$file" ]] || /bin/zsh -n "$root/$file"
+done
+for file in .bashrc .bash_profile; do
+  [[ ! -f "$root/$file" ]] || /bin/bash -n "$root/$file"
+done
+for file in "$root"/.local/bin/dot-*; do
+  [[ ! -f "$file" ]] || /bin/bash -n "$file"
+done
+printf 'Shell syntax OK\n'

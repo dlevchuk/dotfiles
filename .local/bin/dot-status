@@ -1,0 +1,3 @@
+#!/bin/bash
+set -euo pipefail
+git -c core.fsmonitor=false --git-dir="$HOME/.dotfiles" --work-tree="$HOME" -C "$HOME" status --short --branch --untracked-files=no

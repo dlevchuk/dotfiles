@@ -1,0 +1,46 @@
+#!/bin/bash
+set -euo pipefail
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+mode=manual
+if [[ "${1:-}" == --auto ]]; then mode=auto; shift; fi
+if [[ $# -gt 1 ]]; then echo 'Usage: dot-save [--auto] [commit-message]' >&2; exit 2; fi
+message="${1:-dotfiles $(date +%F-%H%M)}"
+repo="$HOME/.dotfiles"
+state="$HOME/.local/state/dotfiles"
+mkdir -p "$state"
+# flock is not shipped with macOS; advisory locking via a directory.
+if ! mkdir "$state/save.lock" 2>/dev/null; then
+  echo 'Another dot-save is active; check save.lock if a process was killed.' >&2
+  exit 1
+fi
+trap 'rmdir "$state/save.lock"' EXIT
+printf '%s\n' "$$" > "$state/save.pid"
+trap 'rm -f "$state/save.pid"; rmdir "$state/save.lock"' EXIT
+dot() { git -c core.fsmonitor=false --git-dir="$repo" --work-tree="$HOME" -C "$HOME" "$@"; }
+"$HOME/.local/bin/dot-check" "$HOME"
+# Respect any existing index; never accidentally commit someone else's staging.
+dot rev-parse --verify HEAD >/dev/null
+if [[ "$(dot symbolic-ref --short HEAD)" != main ]]; then
+  echo "Expected main branch; refusing automatic staging." >&2; exit 1
+fi
+if ! dot diff --cached --quiet; then
+  echo 'Index already contains staged changes; review and commit them with dot first.' >&2
+  exit 1
+fi
+# Explicit paths only: stage changes/deletions of tracked files, never discover home files.
+dot ls-files -z > "$state/tracked.paths"
+[[ -s "$state/tracked.paths" ]] || { echo "No tracked files." >&2; exit 1; }
+git -c core.fsmonitor=false --git-dir="$repo" --work-tree="$HOME" -C "$HOME" add -u --pathspec-from-file="$state/tracked.paths" --pathspec-file-nul
+if ! dot diff --cached --quiet; then
+  if [[ "$mode" == manual ]]; then dot --no-pager diff --cached; fi
+  dot diff --cached --check
+  dot commit -m "$message"
+else
+  echo 'No tracked changes.'
+fi
+if [[ "$mode" == auto ]]; then
+  # Never pull/rebase automatically. A rejected push remains visible in the log.
+  export GIT_TERMINAL_PROMPT=0
+  export GIT_SSH_COMMAND='ssh -o BatchMode=yes -o ConnectTimeout=15 -o ServerAliveInterval=15 -o ServerAliveCountMax=2'
+  dot push origin HEAD:main
+fi

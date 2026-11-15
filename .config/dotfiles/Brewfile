@@ -1,0 +1,10 @@
+# Dependencies used by the shell configuration.
+brew "git"
+brew "atuin"
+brew "bat"
+brew "eza"
+brew "powerlevel10k"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
+brew "ripgrep"
+brew "gh"
