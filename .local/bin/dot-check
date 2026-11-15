@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 root="${1:-$HOME}"
-for file in .zshrc .p10k.zsh; do
+for file in .zshrc .zprofile .p10k.zsh; do
   [[ ! -f "$root/$file" ]] || /bin/zsh -n "$root/$file"
 done
 for file in .bashrc .bash_profile; do
